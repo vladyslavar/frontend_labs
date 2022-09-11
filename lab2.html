@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="Рожкован Владислава, ІТ-02, lab2, HTML5, CSS">
+        <meta name="description" content="Second laboratory work for course Front-end basics">
+        <style>
+            table, th, td{
+                width: 30%;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr:first-child{
+                background-color: #858f8f;
+            }
+            tr:nth-child(2){
+                background-color: #f5f585;
+            }
+            tr:first-child:hover{
+                background-color: #EEE5DE;
+            }
+            tr:nth-child(2):hover{
+                background-color: #8A5DA4;
+            }
+        </style>
+        <link rel="stylesheet", href="style2lab.css">
+    </head>
+    <body>
+        <h3>Task 1</h3>
+        <table>
+            <tr>
+                <td>Рожкован</td>
+                <td colspan="2">Владислава</td>
+                <td>Сергіївна</td>
+            </tr>
+            <tr>
+                <td rowspan="2">ІТ-02</td>
+                <td rowspan="2">Лабораторна №2</td>
+                <td>Варіант</td>
+                <td rowspan="2">85(5)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <h3>Task 2</h3>
+        <h5>Position:</h5>
+        <div class="figure">
+            <div class="red-circle common-params"></div>
+            <div class="green-circle common-params"></div>
+            <div class="blue-circle common-params"></div>
+        </div>
+        <h5>Transform:</h5>
+        <div class="figure-transform">
+            <div class="red-circle-transform common-params"></div>
+            <div class="green-circle-transform common-params"></div>
+            <div class="blue-circle-transform common-params"></div>
+        </div>
+    </body>
+</html>

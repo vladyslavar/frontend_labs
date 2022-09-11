@@ -1,0 +1,42 @@
+.figure{
+    position: relative;
+    margin-left: 5%;
+}
+.common-params{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    opacity: 60%;
+}
+.red-circle{
+    background-color: #f03629;
+    margin-left: 100px;
+}
+.green-circle{
+    background-color: #28b563;
+    margin-left: 140px;
+    margin-top: -40px;
+}
+.blue-circle{
+    background-color: #4692f0;
+    margin-left: 60px;
+    margin-top: -102px;
+}
+
+.figure-transform{
+    transform:translate(80px, 30px)
+}
+.red-circle-transform{
+    background-color: #f03629;
+    transform:translateX(100px)
+}
+.green-circle-transform{
+    background-color: #28b563;
+    transform:translate(140px, -40px)
+}
+.blue-circle-transform{
+    background-color: #4692f0;
+    transform:translate(60px, -142px)
+}
+  

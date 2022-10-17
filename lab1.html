@@ -7,6 +7,8 @@
         <title>
             Рожкован В.С. ІТ-02
         </title>
+        <script src="script4lab.js"></script>
+        <link rel="stylesheet", href="style4lab.css">
     </head>
     <body>
         <p>
@@ -32,13 +34,13 @@
             <li>"The Giver", 2014</li>
         </ol>
         
-        <p><strong>Стокгольм</strong> – столиця королівства Швеція. 
+        <p id="stockholm" onclick="stockholm_click()"><strong>Стокгольм</strong> – столиця королівства Швеція. 
             Стокгольм одне із найгарніших міст Скандинавії із унікальною природою: 
             він збудований на березі озера Меларен і разом із 14 великими 
             та 24 тисячами маленьких островів утворюють Стокгольмський Архіпелаг. 
             В місті немає жодних промислових підприємств, тому повітря надзвичайно чисте + 
             є величезна кількість парків, каналів з мостами, які з’єднують острови між собою.</p>
-        <p><strong>Найцікавіші місця Стокгольму:</strong></p>
+        <p class="places-stockholm" onclick="stockholm_places_click()"><strong>Найцікавіші місця Стокгольму:</strong></p>
         <ul>
             <li>Королівський палац - діюча резиденція монархів відкрита для відвідування туристів. 
                 В будні дні на площі перед палацом проходить церемонія зміни вартових.</li>
@@ -48,6 +50,17 @@
             <li>Старовинний Лицарський острів із більш ніж 700-літньою історією знаходиться поруч із старим містом. 
                 Острів ще називають “островом сірих монахів” через монахів-францисканців, які носили довгі ряси сірого кольору.</li>
         </ul>
-        <a href="https://start.stockholm/" ><img src="STOCKHOLM.jpg"></a>
+        <div id="images">
+            <a href="https://start.stockholm/" ><img src="STOCKHOLM.jpg"></a>
+        </div>
+        <p> </p>
+        <p> </p>
+        <div>
+            <button type="button" onclick="add_image()">Додати</button>
+            <button type="button" onclick="increase_image()">Збільшити</button>
+            <button type="button" onclick="decrease_image()">Зменшити</button>
+            <button type="button" onclick="remove_image()">Видалити</button>
+        </div>
+        
     </body>
 </html>

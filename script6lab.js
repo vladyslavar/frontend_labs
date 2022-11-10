@@ -1,32 +1,32 @@
 url = "https://randomuser.me/api"
 
-// cal with fetch
-async function fetchCall()
+async function call()
 {
     exictingNode = document.getElementsByClassName("users")[0]
             while (exictingNode.firstChild) {
                 exictingNode.removeChild(exictingNode.lastChild);
             }
-            
     for(i = 0; i < 5; i++)
     {
-        responce = await fetch(url)
-        if(responce.ok)
-        {
-            returned_respnce = await responce.json()
-            json = returned_respnce.results[0]
+        myPromise = new Promise(async function(resolve, reject){
+            responce = await fetch(url)
+            if(responce.ok) {
+                returned_respnce = await responce.json()
+                json = returned_respnce.results[0]
 
-            
-            createUser(json)
-            console.log("+")
-        }
-        else
-        {
-            console.log(responce.status)
-            console.log("-")
-        }
+                exictSuccessNode = document.getElementsByClassName("Success-info")[0]
+                if(exictSuccessNode == undefined)
+                {
+                    SuccessTextNodes("Success")
+                }
+
+                resolve(createUser(json))
+            }
+            else{
+                reject(responce.status);
+            }
+        })
     }
-    
 }
 function createUser(data)
 {
@@ -35,7 +35,9 @@ function createUser(data)
     container.setAttribute("class", "user")
     parent.appendChild(container)
 
-    container.style.width = "20%"
+    container.style.width = "19.9%"
+    container.style.backgroundColor = "#7b94ad"
+    container.style.border = "1px solid black"
 
     img = document.createElement("img")
     img.setAttribute("class", "user-img")
@@ -48,12 +50,6 @@ function createUser(data)
     createTextNodes("email", data.email, container)
     createTextNodes("latitude", data.location.coordinates.latitude, container)
     createTextNodes("longitude", data.location.coordinates.longitude, container)
-/*
-    para1 = document.createElement("p")
-    para1.setAttribute("class", "user-cell")
-    node = document.createTextNode("cell: " + data.cell);
-    para1.appendChild(node);
-    container.appendChild(para1)*/
     
 }
 function createTextNodes(name, data, parent)
@@ -63,4 +59,21 @@ function createTextNodes(name, data, parent)
     node = document.createTextNode(name + ": " + data);
     para.appendChild(node);
     parent.appendChild(para)
+
+    para.style.fontSize = "18px"
+    para.style.marginLeft = "5px"
+}
+
+function SuccessTextNodes(text)
+{
+    parent = document.getElementsByClassName("info")[0]
+    para = document.createElement("p")
+    para.setAttribute("class", text + "-info")
+    node = document.createTextNode(text);
+    para.appendChild(node);
+    parent.appendChild(para)
+
+    para.style.fontSize = "24px"
+    para.style.color = "white"
+    para.style.textAlign = "center"
 }

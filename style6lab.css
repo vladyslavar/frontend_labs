@@ -1,5 +1,21 @@
+body
+{
+    background-color: #0b2847;
+}
 .users
 {
     display: flex;
     width: 100%;
+}
+.download_button
+{
+    margin: 0 auto;
+    margin-top: 3%;
+    display: block;    
+    font-size: 16px;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: 0px;
 }

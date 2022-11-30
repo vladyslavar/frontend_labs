@@ -1,0 +1,12 @@
+.maindiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+.data
+{
+    margin: 3%;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+}
